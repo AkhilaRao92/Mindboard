@@ -1,0 +1,164 @@
+form, p, span {  
+    margin:0;  
+    padding:0; }  
+   
+  
+a {  
+    color:#0000FF;  
+    text-decoration:none; }  
+   
+    a:hover { text-decoration:underline; }  
+   
+#wrapper, #loginform {  
+    text-align:center; 
+	float : right;
+    margin:0 auto; 
+	color: #F87217;
+    padding:10px;  
+    background: rgba(0,0,0,0.4);
+    height:530px;  
+    width:22%;  
+	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3); }  
+   
+#loginform { padding-top:18px; }  
+   #wrapper{
+   	margin-right: 10px;
+   }
+    #loginform p { margin: 2px; }  
+   
+#chatbox {  
+	border-radius: 4px;
+	overflow:scroll;
+    text-align:left;  
+    margin:0 auto;
+    margin-bottom:10 px;  
+    padding:10px;  
+    background: white;
+    height:430px;  
+    width:90%;  
+	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);}  
+   
+#chatMsg{  
+    width:80%;  
+    border:1px solid #ACD8F0;
+	margin-top: 2%; 
+	color:black;}  
+   
+#submit { width: 60px; }  
+   
+.error { color: #ff0000; }  
+   
+#menu 
+{ padding:12.5px 25px 12.5px 25px; 
+
+}  
+   
+.welcome 
+{ 
+	text-align: center; 
+	cursor: pointer;
+}  
+   
+.logout { float:right; }  
+   
+.msgln { margin:0 0 2px 0; } 
+
+#canvas {  
+    text-align:left; 
+    margin:0 auto; 
+	color: #F87217;
+    margin-bottom:25px;  
+    padding:25px;  
+    background: rgba(0,0,0,0.4);  
+    height:500px;  
+    width:700px;
+    min-width:700px;  
+    border:1px solid #ACD8F0;
+	margin-left : 15%;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	} 
+
+#ppt {  
+    text-align:left; 
+    margin:0 auto; 
+	color: #F87217;
+    margin-bottom:25px;  
+    padding:25px;  
+    background: rgba(0,0,0,0.4);  
+    height:500px;  
+    width:55%;  
+    border:1px solid #ACD8F0;
+	margin-left : 12%;
+  	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	} 
+	
+#menu-container {  
+    position: relative;
+	background: rgba(0,0,0,0.4);
+	border-radius: 3px;
+	color: #F87217;
+	width: 8%;
+	padding-left: 10px;
+	float : left;
+	height: 250px;
+	margin-left: 10px;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+}
+#menu_ppt{
+	
+	cursor:pointer;
+	padding-bottom: 50px;
+	width : 80%;
+	height:0%;
+	text-align : center;
+	margin-left:3%;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	}
+	
+#menu_canvas{
+	cursor: pointer;
+	padding-bottom: 50px;
+	width : 80%;
+	height:0%;
+	text-align : center;
+	margin-left:3%;
+	margin-top : 50px;
+	margin-bottom : 50px;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	}
+#menu_canvas_heading,#menu_ppt_heading {
+	margin-top: 20%; }
+	
+	
+#logout {
+
+	margin-top:190%;
+	margin-left: 15%;
+	font-family: Kranky;
+	font-weight: bold;
+}
+footer
+{
+	margin-top: -12px;
+}

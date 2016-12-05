@@ -1,0 +1,58 @@
+div.meeting-details
+{
+	margin-top: 100px;
+	margin-left:31%;
+	width: 400px;
+	background: rgba(0,0,0,0.4);
+	border-radius: 3px;
+	color: #F87217;
+	padding-top: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+	line-height: 10px;
+	min-height: 244px;
+	text-align: center;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -20px 30px rgba(0,0,0,0.3);
+}
+
+div.meeting-details h2,div.meeting-details h4,div.meeting-details h3
+{
+	text-align: center;
+}
+
+div.meeting-details #meeting-id
+{
+	width: 200px;
+	margin-left:17%;
+}
+
+div.meeting-details .meetingid
+{
+	width: 200px;
+	margin-left:17%;
+}
+
+div.meeting-details #join-button
+{
+	margin-top: 20px;
+	/*margin-left:43%;*/
+	font-family: Kranky;
+	font-weight: bold;
+	float: left;
+}
+div.meeting-details .create-button
+{
+	float: right;
+	margin-top: 20px;
+	margin-right: -70px;
+		font-family: Kranky;
+	font-weight: bold;
+
+}
+footer
+{
+	margin-top: 210px;
+}

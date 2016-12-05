@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    <link href="/css/bootstrap.css" rel="stylesheet" >
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" >
+    <link href="/css/template.css" rel="stylesheet" >
+    <link href="/css/home.css" rel="stylesheet" >
+    <title>Canvas </title>
+   
+    <script type="text/javascript" >
+
+        function init() {
+            mainCanvas = document.getElementById("mainCanvas");
+            mainCanvas.style.border = "1px solid black";
+            mainCanvas.style.zIndex = 2;
+            mainCanvas.onclick = unselect;
+            mainCanvas.height = 500;
+            mainCanvas.width = 600;
+            canvasShapes = {};
+            lockMoveShape = true;
+            targetShape = null;
+            prevTargetShape = null;
+            formElement = document.getElementById("textBox");
+            formElement.addEventListener('change', textBoxChanged, false);
+
+            formElement = document.getElementById("textSize");
+            formElement.addEventListener('change', textSizeChanged, false);
+
+            formElement = document.getElementById("canvasWidth");
+            formElement.addEventListener('change', canvasWidthChanged, false);
+
+            formElement = document.getElementById("canvasHeight")
+            formElement.addEventListener('change', canvasHeightChanged, false);
+           
+
+        }
+
+        function unselect(event) {
+            console.log(targetShape + "I am called unecesarily");
+            if (event.target.id == "mainCanvas" && targetShape) {
+                targetShape.style.border = "0px solid white";
+                targetShape = null;
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="init()" style='-moz-user-select: none; -webkit-user-select: none;'>
+   <div id="header">
+        <!--Header div begins here-->
+        <h1 id="title">Mind Board </h1>
+    </div>
+    <!-- header div ends here -->
+
+    <div id="menu-container">
+        <!-- menu-container div begins here -->
+        <div id="menu_canvas">
+            <p id="menu_canvas_heading">Canvas </p>
+
+        </div>
+        <div id="menu_ppt">
+            <p id="menu_ppt_heading">PPTs </p>
+        </div>
+        <!-- <input name="logout" type="button" id="logout" value="Logout" /> -->
+
+    </div>
+    <!-- menu-container div begins here -->
+
+    <div id="wrapper">
+        <!-- chat wrapper begins here -->
+        <div id="menu">
+            <p class="welcome">Chat</p>
+        </div>
+
+        <div class="chat">
+            <div id="chatbox"></div>
+            <input name="chatMsg" type="text" id="chatMsg" size="63" onchange="xhrChatSubmit()" placeholder = "Enter the message" />
+        </div>
+
+    </div>
+    <!-- chat wrapper ends here -->
+
+    <div id="canvas" class="canvas" style= "background:white;"> <!-- canvas div begins here -->  
+                <!-- <p> illi chithra bidisuvudu</p>   -->
+                <div id="images" style="width:10%;height:500px;float:left;background:white;margin-left:-15px; border:1px solid black;">
+						<img src="/img/rectangle.png" alt="Rectangle" style = "width:80%;height:5%;margin-left:5px;" onclick="creatRect()" title="Rectangle">
+						<img src="/img/circle.png" alt="Circle" style = "width:80%;height:5%;margin-top:50px;margin-left:5px;" onclick="creatCircle()" title="Circle">
+						<img src="/img/horizontal.png" alt="Horizontal Line" style = "width:80%;height:5%;margin-top:50px;margin-left:5px;" onclick="creatHorizontal()" title="Horizontal Line">
+						<img src="/img/triangle.png" alt="Triangle" style = "width:80%;height:5%;margin-top:50px;margin-left:5px;" onclick="creatTriangle()" title="Triangle">
+						<img src="/img/vertical.png" alt="Vertical Line" style = "width:80%;height:5%;margin-top:50px;margin-left:10px;" onclick="creatVertical()" title="Vertical Line">
+                        <input type="button" onclick="deleteShape()" id="delButton" class="btn "style="margin-top:50px; margin-left:10px;"  value="Delete">
+                        <!--<input type="button" id="Modify" style="margin-top:25px;" value="Modify" >-->
+                </div>
+					
+                    
+
+                <div id="mainCanvas" style="width:600px;min-width:600px;height:500px;margin-left:75px;">
+        
+                </div>
+
+            
+            <div id="toolbar" style="position: absolute; margin-left:-240px; margin-top:-250px;">
+                <span style = "margin-left:30px;font-weight:bold;">Configurations</span>
+                <ul>
+                    <!-- <span class="label" style="width: 60px">Text&nbsp;</span> -->
+                    <input type="text" id="textBox" class="span3"style="width:60px;" placeholder = "Text"/>
+                </ul>
+                <ul>
+                    <!-- <span class="label" style="width: 60px"> Size&nbsp;&nbsp;&nbsp;</span> -->
+                    <input type="text" id="textSize" class="span1" style="width:60px;" placeholder = "Size"/>
+                </ul>
+                <ul>
+                    <!-- <span class="label" style="width: 60px">Width</span> -->
+                    <input type="text" id="canvasWidth" class="span1" style="width:60px;" placeholder = "Width"/>
+                </ul>
+                <ul>
+                    <!-- <span class="label" style="width: 60px">Height</span> -->
+                    <input type="text" id="canvasHeight" class="span1"style="width:60px;" placeholder = "Height"></input>
+                </ul>
+            </div>
+        </div>    <!-- Drawing Boad Ends -->
+
+    </div>
+    <!-- canvas div ends here -->
+    <div id="ppt" class="ppt">
+        <!--  ppt div begins here -->
+        <img id="slideimage" />
+        <button onclick="xhrPPTCommand('next');">Next</button>
+        <button onclick="xhrPPTCommand('prev');">Previous</button>
+
+    </div>
+    <!-- ppt div ends here -->
+    <footer>
+        <small>&copy; MindBoard Team - SE project</small>
+    </footer>
+
+
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+    <script src="/scripts/home.js"></script>
+    <script type="text/javascript" src="/scripts/xhrcommands.js"></script>
+    <script type="text/javascript" src="/scripts/shape.js"></script>
+    <script type="text/javascript" src="/scripts/drawevents.js"></script>
+    <script type="text/javascript" src="/scripts/drawobjects.js"></script>
+    <script type="text/javascript" src="/scripts/MindBoard.js"></script>
+    <script>
+        var my_nickname = "{{ nickname }}";
+        var token = "{{ token }}";
+    </script>
+    <script>
+        channel = new goog.appengine.Channel('{{ token }}');
+        socket = channel.open();
+        socket.onopen = onOpened;
+        socket.onmessage = onMessage;
+        setTimeout(xhrSync, 2000);
+    </script>
+</body>
+</html>

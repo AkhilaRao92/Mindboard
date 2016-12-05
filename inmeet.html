@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+        <title>Mind Board</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			.sidebar {
+				display: inline-block;
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="sidebar">
+			<div class="presenter"></div>
+			<div class="viewer"></div>
+			<div class="text"></div>
+			<input type="text" id="words" onblur="sendto()"/>
+		</div>
+		<script>
+			var my_nickname = "{{ nickname }}";
+			var token = "{{ token }}";
+		</script>
+		<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+		<script type="text/javascript" src="/scripts/MindBoard.js"></script>
+		<script>
+			channel = new goog.appengine.Channel('{{ token }}');
+			socket = channel.open();
+			socket.onopen = onOpened;
+			socket.onmessage = onMessage;
+		</script>
+	</body>
+</html>

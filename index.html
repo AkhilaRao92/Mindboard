@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>MindBoard | Enter the meeting id</title>
+    <link rel="stylesheet" href="/css/template.css">
+    <link rel="stylesheet" href="/css/meeting.css">
+</head>
+<body>
+    <div id="header">
+        <h1 id="title">Mind Board </h1>
+    </div>
+
+    <div class="meeting-details">
+        <!-- meeting div starts here -->
+        <h2>Hi user!</h2>
+        <h3>Welcome to MindBoard</h3>
+        <h4>Please enter your meeting id to continue</h4>
+        <div id="meeting-id" name="meeting-id">
+            <input type="text" name="meeting-id" id="meetingid" placeholder="Enter meeting id" required> </input>
+
+            <button value="Join meeting" id="join-button" class="join" onclick="joinmeeting()">Join Meeting</button>
+            <button class="create" onclick="createmeeting()">Create Meeting</button>
+        </div>
+
+    </div>
+    <!-- meeting dvi ends here -->
+
+    <footer>
+        <small>&copy; MindBoard Team - SE project</small>
+    </footer>
+
+
+
+    <script>
+        function  createmeeting(){
+            var name = document.getElementById("meetingid").value;
+            if (name) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/meetups');
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.send('meetid=' + name);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            location.href = '/meetups/' + name;
+                        } else {
+                            alert('Error creating game: ' + xhr.responseText);
+                        }
+                    }
+                };
+            }
+        };
+         function joinmeeting() {
+            var name = document.getElementById("meetingid").value;
+            if (name) {
+                location.href = '/meetups/' + name;
+            }
+        };
+		</script>
+    <!-- javascript includes -->
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/meeting.js"></script>
+</body>
+</html>
